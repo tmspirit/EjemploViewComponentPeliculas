@@ -1,0 +1,18 @@
+﻿@using EjemploViewComponentPeliculas.Models
+@model List<Pelicula>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Peliculas</h2>
+
+@foreach (var item in Model)
+{
+    <div style="border-bottom:solid">
+        <h4>
+            <strong>@Html.DisplayFor(modelItem => item.Titulo)</strong>
+            <small class="pl-2 text-muted">@Html.DisplayFor(modelItem => item.Precio) €</small>
+        </h4>      
+    </div>
+}
